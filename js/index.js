@@ -9,50 +9,54 @@ const mainfunc = () => {
     slideToClickedSlide: true,
     toggle: true,
     keyboard: {
-        enabled: true,
-        onlyInViewport: false,
+      enabled: true,
+      onlyInViewport: false,
     },
     breakpoints: {
-        320: {
-            direction: 'vertical',
-            slidesPerView: 3,
-            mousewheel: true,
-            loop: true,
-            spaceBetween: 110,
-        },
-        891: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        1200: {
-            slidesPerView: 3,
-            spaceBetween: 70
-          }
+      320: {
+        direction: 'vertical',
+        slidesPerView: 3,
+        mousewheel: true,
+        loop: true,
+        spaceBetween: 110,
+      },
+      891: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 70
       }
+    }
   });
 
-  var modalForm = document.getElementById('form__modal');
-  var openFormModalBtn = document.getElementById('form__button');
+  var body = document.querySelector('body')
+  var modalForm = document.querySelector('.modal');
+  var openFormModalBtn = document.querySelector('.button__open-form');
 
   openFormModalBtn.addEventListener('click', () => {
     modalForm.classList.add('active');
+    body.classList.add('lock');
   });
 
   modalForm.addEventListener('click', (e) => {
-    const is__modal = e.target.closest('.modal__inner');
-    if (!is__modal) {
+    const modal = e.target.closest('.modal__inner');
+    if (!modal) {
       modalForm.classList.remove('active');
-    }
-  })
-
-  modalForm.addEventListener('keyup', (e) => {
-    const is__modal = e.target.closest('.modal__inner');
-    if (e.key === 'Escape') {
-      modalForm.classList.remove('active');
-    }
+      body.classList.remove('lock')
+    };
   });
 
+  document.addEventListener('keyup', (e) => {
+    if (e.code === "Escape") {
+      modalForm.classList.remove('active');
+      body.classList.remove('lock');
+    };
+  });
 
+  
+  
   const findMyCity = () => {
     const status = document.querySelector('.user-city');
     const success = (position) => {
