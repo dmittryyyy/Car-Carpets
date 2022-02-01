@@ -442,7 +442,7 @@ Application form */
 .modal__inner {
     position: relative;
     z-index: 150;
-    background: #ffffff url('../img/fon-modal-2.png');
+    background: #ffffff url('../img/modal-back.png');
     background-repeat:no-repeat;
     background-position: center;
     background-size:cover;
@@ -500,7 +500,7 @@ Application form */
     font-weight: 300;
 }
 
-.modal__buttom {
+.modal__button {
     width: 17rem;
     font-size: 1.6rem;
     padding: 1.5rem 3rem;
@@ -612,7 +612,7 @@ body.lock {
         width: 90%;
     }
 
-    .footer__wrap {
+    .footer__wrapper {
         padding: 9rem 0 4rem;
     }
 
@@ -652,7 +652,7 @@ body.lock {
         padding: 4rem 12rem 7rem;
     }
 
-    .review__wrap {
+    .review__wrapper {
         padding-top: 10rem;
         max-height: 90rem;
     }
@@ -741,7 +741,7 @@ body.lock {
         font-size: 1.8rem;
     }
 
-    .header__wrap {
+    .header__wrapper {
         flex-direction: column;
     }
 
@@ -811,7 +811,7 @@ body.lock {
         margin-bottom: 1.5rem;
     }
 
-    .footer__wrap {
+    .footer__wrapper {
         flex-direction: column;        
         align-items: center;
         text-align: center;
@@ -837,7 +837,7 @@ body.lock {
         display: none;
     }
 
-    .footer__wrap {
+    .footer__wrapper {
         padding: 6rem 0 4rem;
     }
 
@@ -881,7 +881,7 @@ body.lock {
         height: 1rem;
     }
 
-    .modal__buttom {
+    .modal__button {
         width: 11rem;
         font-size: .9rem;
         padding: 1rem 2rem;
